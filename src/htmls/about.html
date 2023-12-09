@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tour Booking Website</title>
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <!-- bootstrap js link -->
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="../pics/navbar-brand-logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item about-nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Honeymoon packages</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Tours packages</a></li>
+                  <li><a class="dropdown-item" href="#">Musical Events</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#build-package"
+                      href="#"
+                      >Build package</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Upcoming Packages</a>
+              </li>
+            </ul>
+            <button class="btn navbar-btn">Get in Touch</button>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="build-package"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close d-flex"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <h1 class="modal-title ms-auto" id="exampleModalLabel">
+                build your own package
+              </h1>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post" class="header-package-form">
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control is-required country-field"
+                    list="datalistOptions"
+                    id="first-destination"
+                    required
+                    placeholder="exp: Switzerland"
+                    value="exp: Switzerland"
+                  />
+                  <label for="first-destination" class="form-label">
+                    Enter destination (country, region or city)
+                  </label>
+                </div>
+                <datalist id="datalistOptions">
+                  <option value="San Francisco"></option>
+                  <option value="New York"></option>
+                  <option value="Seattle"></option>
+                  <option value="Los Angeles"></option>
+                  <option value="Chicago"></option>
+                </datalist>
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control is-required country-field"
+                    list="datalistOptions"
+                    id="second-destination"
+                    required
+                    placeholder="exp: Lauterbrunen"
+                    value="exp: Lauterbrunen"
+                  />
+                  <label for="second-destination" class="form-label">
+                    Enter destination (country, region or city)
+                  </label>
+                </div>
+                <datalist id="datalistOptions">
+                  <option value="San Francisco"></option>
+                  <option value="New York"></option>
+                  <option value="Seattle"></option>
+                  <option value="Los Angeles"></option>
+                  <option value="Chicago"></option>
+                </datalist>
+                <button class="header-add-destination-btn mb-3">
+                  + Add destination
+                </button>
+                <div class="row date-form-cont">
+                  <div class="col-8 date">
+                    <p class="date-range-txt">Date Range</p>
+                    <button class="header-start-date">
+                      Start Date <img src="../pics/form-arrow-vector.png" />
+                      <button class="header-end-date">End Date</button>
+                    </button>
+                  </div>
+                  <div class="col-4 guests">
+                    <label for="number-select">Guests:</label>
+                    <select name="pets" id="number-select">
+                      <option value="2-adults" selected>2 adults</option>
+                      <option value="3-adults">3 adults</option>
+                      <option value="4-adults">4 adults</option>
+                      <option value="5-adults">5 adults</option>
+                      <option value="6-adults">6 adults</option>
+                    </select>
+                  </div>
+                </div>
+                <p>Activities preferences (optional)</p>
+                <div class="row header-preference-checkbox">
+                  <div class="col-6 col-sm-3 column col-one">
+                    <div class="input-label-group">
+                      <input type="checkbox" id="culture" name="culture" />
+                      <label for="culture">Culture</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Romantic" name="Romantic" />
+                      <label for="Romantic">Romantic</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Shopping" name="Shopping" />
+                      <label for="Shopping">Shopping</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input
+                        type="checkbox"
+                        id="Traditions"
+                        name="Traditions"
+                      />
+                      <label for="Traditions">Traditions</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Guide" name="Guide" />
+                      <label for="Guide">Guide</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-3 column col-two">
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Outdoors" name="Outdoors" />
+                      <label for="Outdoors">Outdoors</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Religion" name="Religion" />
+                      <label for="Religion">Religion</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Business" name="Business" />
+                      <label for="Business">Business</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Walks" name="Walks" />
+                      <label for="Walks">Walks</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input
+                        type="checkbox"
+                        id="Healthcare"
+                        name="Healthcare"
+                      />
+                      <label for="Healthcare">Healthcare</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-3 column col-three">
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Relaxing" name="Relaxing" />
+                      <label for="Relaxing">Relaxing</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Hiking" name="Hiking" />
+                      <label for="Hiking">Hiking</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Museums" name="Museums" />
+                      <label for="Museums">Museums</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Fishing" name="Fishing" />
+                      <label for="Fishing">Fishing</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input
+                        type="checkbox"
+                        id="Accomodation"
+                        name="Accomodation"
+                      />
+                      <label for="Accomodation">Accomodation</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-3 column col-four">
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Wildlife" name="Wildlife" />
+                      <label for="Wildlife">Wildlife</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Musical" name="Musical" />
+                      <label for="Musical">Musical</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Party" name="Party" />
+                      <label for="Party">Party</label>
+                    </div>
+                    <div class="input-label-group">
+                      <input type="checkbox" id="Cruise" name="Cruise" />
+                      <label for="Cruise">Cruise</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn header-form-submit-btn">
+                Build Package
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-header-txt-cont">
+        <p>Read</p>
+        <p>About Us</p>
+      </div>
+    </header>
+    <section>
+      <div class="sightseeing-cont">
+        <div class="sightseeing-card">
+          <p>promotion</p>
+          <p>we provide you best europe sightseeing tours</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At earum
+            eaque unde eligendi iste, numquam est perspiciatis exercitationem
+            reiciendis illum veritatis
+          </p>
+          <button>view packages</button>
+        </div>
+        <div class="sightseeing-img-cont">
+          <img
+            src="../pics/about-us-elipse-border.png"
+            alt="image of a beach"
+          />
+        </div>
+      </div>
+      <div class="youtube-video-cont">
+        <img src="../pics/about-us/play-btn-img.png" alt="play-button" />
+        <p>wanderlust</p>
+      </div>
+      <div class="tour-plans-cont">
+        <div class="main-img">
+          <img
+            src="../pics/about-us/about-us-tour-plans-1.png"
+            alt="image of vacation cards"
+          />
+        </div>
+        <div class="tour-plans-card">
+          <p class="title">trend</p>
+          <p class="header">our popular tour plans</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+            similique corrupti ipsum volupta Eligendi libero eius dolorum
+            asperiores commodi? Aliquam, quos a?
+          </p>
+          <div class="progress-cont">
+            <div class="progress-content-wrap">
+              <div class="outer">
+                <div class="inner vacations">
+                  <img src="../pics/about-us/progress-circle-inner-blue.png" />
+                  <div class="num">78%</div>
+                </div>
+              </div>
+              <div class="progress-txt">vacations</div>
+            </div>
+            <div class="progress-content-wrap">
+              <div class="outer">
+                <div class="inner honeymoon">
+                  <img
+                    src="../pics/about-us/progress-circle-inner-pink.png"
+                    alt=""
+                  />
+                  <div class="num">55%</div>
+                </div>
+              </div>
+              <div class="progress-txt">honeymoon</div>
+            </div>
+            <div class="progress-content-wrap">
+              <div class="outer">
+                <div class="inner musical">
+                  <img
+                    src="../pics/about-us/progress-circle-inner-purple.png"
+                  />
+                  <div class="num">30%</div>
+                </div>
+              </div>
+              <div class="progress-txt">musical events</div>
+            </div>
+          </div>
+        </div>
+        <div class="tour-plans-second-main-img">
+          <img
+            src="../pics/about-us/tour-plans-oyster.png"
+            alt="image of an oyster"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="second-section">
+      <div class="explore-more-cont">
+        <p>explore more</p>
+        <p>our international package</p>
+      </div>
+      <div class="image-grid-cont">
+        <img
+          src="../pics/about-us/grid-image-1.png"
+          alt="vacation image"
+          class="image-1"
+        />
+        <img
+          src="../pics/about-us/grid-image-2.png"
+          alt="vacation image"
+          class="image-2"
+        />
+        <img
+          src="../pics/about-us/grid-image-3-rowspan2.png"
+          rowspan="2"
+          alt="vacation image"
+          class="image-3"
+        />
+        <img
+          src="../pics/about-us/grid-image-4.png"
+          alt="vacation image"
+          class="image-4"
+        />
+        <img
+          src="../pics/about-us/grid-image-5.png"
+          alt="vacation image"
+          class="image-5"
+        />
+        <img
+          src="../pics/about-us/grid-image-6.png"
+          alt="vacation image"
+          class="image-6"
+        />
+        <img
+          src="../pics/about-us/grid-image-7.png"
+          alt="vacation image"
+          class="image-7"
+        />
+        <img
+          src="../pics/about-us/grid-image-8.png"
+          alt="vacation image"
+          class="image-8"
+        />
+        <img
+          src="../pics/about-us/grid-image-9.png"
+          alt="vacation image"
+          class="image-9"
+        />
+        <img
+          src="../pics/about-us/grid-image-10.png"
+          alt="vacation image"
+          class="image-10"
+        />
+        <img
+          src="../pics/about-us/grid-image-11.png"
+          alt="vacation image"
+          class="image-11"
+        />
+      </div>
+
+      <div class="client-all-wrapper">
+        <div class="client-slider-cont">
+          <button class="slider-btn slider-btn-right">
+            <img src="../pics/about-us/arrow-right.png" alt="" />
+          </button>
+          <div class="client-track-cont">
+            <ul class="client-track">
+              <li class="client-slide current-slide">
+                <div class="client-card-cont">
+                  <div class="client-card">
+                    <div class="client-img"></div>
+                    <div class="client-txt">
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit.ium illo illum odio ex consectetur exercitationem
+                      placeat voluptate ipsam vero nostrum officia!
+                      Reprehenderit, explicabo.
+                      <span>
+                        <img src="../pics/about-us/double-quote.png" alt=",," />
+                      </span>
+                    </div>
+                    <div class="client-name">christine beckam - designer</div>
+                  </div>
+                </div>
+              </li>
+              <li class="client-slide client-hidden">
+                <div class="client-card-cont">
+                  <div class="client-card">
+                    <div class="client-img"></div>
+                    <div class="client-txt">
+                      Lorem ipsum dolor sit amet consectetur ia! Reprehenderit,
+                      explicabo.
+                      <span>
+                        <img src="../pics/about-us/double-quote.png" alt=",," />
+                      </span>
+                    </div>
+                    <div class="client-name">christine beckam - designer</div>
+                  </div>
+                </div>
+              </li>
+              <li class="client-slide client-hidden">
+                <div class="client-card-cont">
+                  <div class="client-card">
+                    <div class="client-img"></div>
+                    <div class="client-txt">
+                      Lorem ipsum dolor sit amet consectetur ia! Reprehenderit,
+                      explicabo Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. In numquam aut laboriosam! Excrecusandae
+                      obcaecati odio architecto iusto. Neque, possimus ipsa
+                      aliquam eum vitae aspernatur at modi ut a amet! Nulla
+                      officiis deleniti quod magnam.
+                      <span>
+                        <img src="../pics/about-us/double-quote.png" alt=",," />
+                      </span>
+                    </div>
+                    <div class="client-name">christine beckam - designer</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="slider-btn slider-btn-left">
+            <img src="../pics/about-us/arrow-left.png" alt="" />
+          </button>
+        </div>
+
+        <div class="slider-nav-cont">
+          <button class="slider-nav current-slide"></button>
+          <button class="slider-nav"></button>
+          <button class="slider-nav"></button>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer>
+      <div class="footer-cont">
+        <div class="grid-column-one grid-column">
+          <img src="../pics/footer-logo.png" />
+          <p>travel helps companies manage payment easily.</p>
+          <div class="footer-icons">
+            <img src="../pics/052-linkedin.png" alt="linkedin app icon" />
+            <img src="../pics/025-messenger.png" alt="messenger app icon" />
+            <img src="../pics/096-twitter.png" alt="twitter app icon" />
+            <img src="../pics/097-twoo.png" alt="app icon" />
+          </div>
+        </div>
+        <div class="grid-column-two grid-column">
+          <p>company</p>
+          <p>about us</p>
+          <p>careers</p>
+          <p>blog</p>
+          <p>pricing</p>
+        </div>
+        <div class="grid-column-three grid-column">
+          <p>destinations</p>
+          <p>maldives</p>
+          <p>los angeles</p>
+          <p>las vegas</p>
+          <p>torronto</p>
+        </div>
+        <div class="grid-column-four grid-column">
+          <p>join our newsletter</p>
+          <form action="#" method="post">
+            <div class="mail-form-container">
+              <input
+                type="email"
+                name="userEmail"
+                id="footer-user-mail"
+                placeholder="Your Email Address"
+              />
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+          <p>* will send you weekly updates for your better tour packages.</p>
+        </div>
+      </div>
+      <div class="copy-right">
+        <hr />
+        <p>copyright @xpro 2022. all rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/about.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
